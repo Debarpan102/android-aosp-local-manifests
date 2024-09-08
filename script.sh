@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/lineage-priv/keys/
+rm -rf vendor/aosp-priv/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
@@ -17,9 +17,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-
-# Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -27,9 +25,9 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
 if [ ! 0 == 0 ]
-    then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
+    then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
 
 echo "========================================================================"
@@ -48,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/lineage-priv/keys/"
+DIRKEYS="vendor/aosp-priv/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -59,9 +57,9 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14.0 temp-repo
+git clone https://github.com/Debarpan/devinfinix-aosp-roms-keys -b 14.0 temp-repo
 mkdir "$DIRKEYS"
-mv temp-repo/RisingOs-14/* "$DIRKEYS"
+mv temp-repo/PixelOs-14/* "$DIRKEYS"
 rm -rf temp-repo
 
 echo "========================================================================"
@@ -74,7 +72,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# RISEUP
+# Pixel Os
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+lunch aosp_devicecodename-ap2a-buildtype
+mka bacon
