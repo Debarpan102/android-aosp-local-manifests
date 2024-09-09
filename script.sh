@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/aosp-priv/keys/
+rm -rf vendor/aosp/signing/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
@@ -46,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/aosp-priv/keys/"
+DIRKEYS="vendor/aosp/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
