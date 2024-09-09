@@ -25,7 +25,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-pixel .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -74,5 +74,5 @@ echo "========================================================================"
 
 # Pixel Os
 source build/envsetup.sh
-lunch aosp_devicecodename-ap2a-buildtype
+lunch aosp_ice-userdebug
 mka bacon
