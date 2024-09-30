@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/aosp/signing/keys/
+rm -rf vendor/derp/signing/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
@@ -17,7 +17,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -25,7 +25,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-pixel .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-derp .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -46,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/aosp/signing/keys/"
+DIRKEYS="vendor/derp/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -72,7 +72,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Pixel Os
+# Derpfest
 source build/envsetup.sh
-lunch aosp_ice-ap2a-eng
-mka bacon
+lunch derp_ice-userdebug
+mka derp
