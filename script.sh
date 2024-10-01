@@ -9,6 +9,7 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/derp/signing/keys/
+rm -rf packages/apps/ParanoidSense
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
