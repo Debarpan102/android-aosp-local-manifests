@@ -17,7 +17,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -25,7 +25,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-pixel .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-los .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -72,7 +72,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Pixel Os
+# Lineage Os
 source build/envsetup.sh
 lunch aosp_ice-ap2a-eng
 mka bacon
