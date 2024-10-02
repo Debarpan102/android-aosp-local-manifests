@@ -74,5 +74,4 @@ echo "========================================================================"
 
 # Lineage Os
 source build/envsetup.sh
-lunch aosp_ice-ap2a-eng
-mka bacon
+breakfast ice
