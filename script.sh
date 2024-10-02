@@ -46,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/lineage/signing/keys/"
+DIRKEYS="vendor/lineage-priv/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
