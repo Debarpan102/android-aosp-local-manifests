@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/aosp/signing/keys/
+rm -rf vendor/lineage/signing/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
@@ -46,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/aosp/signing/keys/"
+DIRKEYS="vendor/lineage/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -59,7 +59,7 @@ fi
 echo "Cloning the repository..."
 git clone https://github.com/Debarpan/devinfinix-aosp-roms-keys -b 14.0 temp-repo
 mkdir "$DIRKEYS"
-mv temp-repo/PixelOs-14/* "$DIRKEYS"
+mv temp-repo/lineage-14/* "$DIRKEYS"
 rm -rf temp-repo
 
 echo "========================================================================"
