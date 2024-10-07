@@ -45,6 +45,15 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Clone Keys
 
 DIRKEYS="vendor/lineage-priv/keys/"
@@ -58,14 +67,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/Debarpan/devinfinix-aosp-roms-keys -b 14.0 temp-repo
-mkdir "$DIRKEYS"
-mv temp-repo/lineage-14/* "$DIRKEYS"
-rm -rf temp-repo
-
-echo "========================================================================"
-echo "CLONED KEYS"
-echo "========================================================================"
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
 
 
 echo "========================================================================"
