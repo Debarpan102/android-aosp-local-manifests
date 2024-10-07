@@ -44,9 +44,18 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Clone Keys
 
-DIRKEYS="vendor/aosp/signing/keys/"
+DIRKEYS="vendor/lineage-priv/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -57,10 +66,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/Debarpan/devinfinix-aosp-roms-keys -b 14.0 temp-repo
-mkdir "$DIRKEYS"
-mv temp-repo/PixelOs-14/* "$DIRKEYS"
-rm -rf temp-repo
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
