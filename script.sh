@@ -81,4 +81,5 @@ echo "========================================================================"
 
 # Lineage Os
 source build/envsetup.sh
-brunch ice userdebug
+lunch lineage_ice-ap2a-userdebug
+mka bacon
