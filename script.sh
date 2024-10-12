@@ -81,4 +81,4 @@ echo "========================================================================"
 
 # Lineage Os
 source build/envsetup.sh
-breakfast ice userdebug
+brunch ice userdebug
