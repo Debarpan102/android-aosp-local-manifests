@@ -67,7 +67,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
+git clone https://github.com/Debarpan102/Signed-Rom-Keys-Debarpan102 --depth=1 -b main "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
