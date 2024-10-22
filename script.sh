@@ -67,8 +67,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/Debarpan102/Signed-Rom-Keys-Debarpan102 --depth=1 -b main "$DIRKEYS"
-
+git clone https://github.com/Debarpan102/Signed-keys-Debarpan102 --depth=1 -b master "$DIRKEYS"
 echo "========================================================================"
 echo "CLONED KEYS"
 echo "========================================================================"
