@@ -55,7 +55,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/lineage-priv/keys/"
+DIRKEYS="vendor/aosp/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -65,11 +65,11 @@ else
     echo "Directory $DIRKEYS does not exist. No need to delete."
 fi
 
-echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
+#echo "Cloning the repository..."
+#git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
 
 echo "========================================================================"
-echo "CLONED KEYS"
+echo "NOT CLONING KEYS"
 echo "========================================================================"
 
 
