@@ -80,5 +80,5 @@ echo "========================================================================"
 
 # Pixel Os
 source build/envsetup.sh
-lunch aosp_ice-ap2a-eng
+lunch aosp_ice-ap2a-userdebug
 mka bacon
