@@ -17,7 +17,8 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
+
+repo init -u https://github.com/Project-PixelStar/manifest -b 14-qpr3 --git-lfs 
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -25,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-pixel .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-ps .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -78,7 +79,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Pixel Os
+# Pixelstar 
 source build/envsetup.sh
-lunch aosp_ice-ap2a-userdebug
+lunch pixelstar_ice-userdebug
 mka bacon
