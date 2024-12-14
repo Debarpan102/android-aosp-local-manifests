@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/aosp/signing/keys/
+rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
@@ -18,7 +18,8 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-repo init -u https://github.com/Project-PixelStar/manifest -b 14-qpr3 --git-lfs 
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -26,7 +27,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 14-ps .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15-los .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -56,7 +57,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/aosp/signing/keys/"
+DIRKEYS="vendor/lineage-priv/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -79,7 +80,6 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Pixelstar 
+# Lineage22 
 source build/envsetup.sh
-lunch pixelstar_ice-userdebug
-mka bacon
+brunch ice userdebug 
