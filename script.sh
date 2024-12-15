@@ -49,6 +49,8 @@ echo "========================================================================"
 # Upgrade System and install openssl
 
 sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt install libc6-dev
+
 
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
