@@ -50,6 +50,7 @@ echo "========================================================================"
 
 sudo apt update && sudo apt upgrade -y
 sudo apt update && sudo apt install libc6-dev
+sudo apt update && sudo apt install openssl libssl-dev
 
 
 echo "========================================================================"
