@@ -18,8 +18,7 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
-
+repo init -u https://github.com/2by2-Project/android.git -b 15 --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -27,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15-los .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15-2by2 .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
