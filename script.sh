@@ -85,5 +85,4 @@ echo "========================================================================"
 
 # Lineage22 
 source build/envsetup.sh
-lunch lineage_ice-ap3a-userdebug
-mka bacon
+brunch ice userdebug
