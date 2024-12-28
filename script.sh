@@ -69,4 +69,4 @@ echo "========================================================================"
 
 # Lineage22 
 source build/envsetup.sh
-brunch ice eng
+brunch ice userdebug
