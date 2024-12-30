@@ -18,7 +18,7 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-repo init -u https://github.com/2by2-Project/android.git -b 15 --git-lfs
+repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -26,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15-2by2 .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15-pixelage .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -67,6 +67,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Lineage22 
+# Pixelage
+export PIXELAGE_BUILD="ice"
 source build/envsetup.sh
-brunch ice userdebug
+lunch pixelage_ice-ap4a-userdebug
+mka bacon
