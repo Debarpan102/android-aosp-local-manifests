@@ -71,5 +71,4 @@ echo "========================================================================"
 # Pixelage
 export PIXELAGE_BUILD="ice"
 source build/envsetup.sh
-lunch pixelage_ice-ap4a-userdebug
-mka bacon
+brunch ice userdebug
