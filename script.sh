@@ -69,4 +69,4 @@ echo "========================================================================"
 
 # Lineage-22.1
 . build/envsetup.sh
-brunch ice
+brunch ice userdebug
