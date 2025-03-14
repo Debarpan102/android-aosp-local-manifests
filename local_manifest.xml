@@ -30,7 +30,7 @@
   <project path="vendor/bcr" name="Chaitanyakm/vendor_bcr" remote="github-rmx3461" revision="main" />
 
   <!-- Oplus Camera -->
-  <project path="vendor/oplus/camera" name="mvimal2607/propretary_vendor_oplus_camera" clone-depth="1" remote="github-rmx3461" revision="everest" />
+  <project path="vendor/oplus/camera" name="DevInfinix/proprietary_vendor_oplus_camera" clone-depth="1" remote="github-rmx3461" revision="15-ice" />
   <!-- ViMusic -->
   <!-- project path="packages/apps/ViMusic" name="Google-Pixel2-2XL/packages_apps_ViMusic" remote="github-rmx3461" revision="main" /-->
 
