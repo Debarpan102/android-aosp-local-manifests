@@ -11,7 +11,7 @@
            fetch="https://gitlab.com" />
 
   <!-- Device -->
-  <project path="device/realme/ice" name="Debarpan102/android_device_realme_ice" remote="github-rmx3461" revision="lineage-22.1" />
+  <project path="device/realme/ice" name="Debarpan102/android_device_realme_ice" remote="github-rmx3461" revision="Matrixx-11.2" />
 
   <!-- Kernel -->
   <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461" remote="github-rmx3461" revision="nksu-254" />
