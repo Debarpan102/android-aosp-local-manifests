@@ -27,7 +27,7 @@
   
   <project path="vendor/oneplus/sm8350-common" name="Debarpan102/proprietary_vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="fifteen" />
 
-  <project path="vendor/bcr" name="Chaitanyakm/vendor_bcr" remote="github-rmx3461" revision="main" />
+  <!-- project path="vendor/bcr" name="Chaitanyakm/vendor_bcr" remote="github-rmx3461" revision="main" /-->
 
   <!-- Oplus Camera -->
   <!-- project path="vendor/oplus/camera" name="DevInfinix/proprietary_vendor_oplus_camera" clone-depth="1" remote="github-rmx3461" revision="15-ice" /-->
