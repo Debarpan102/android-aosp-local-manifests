@@ -17,7 +17,7 @@
   <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461" remote="github-rmx3461" revision="nksu-254" />
 
   <!-- Vendor -->
-  <project path="vendor/realme/ice" name="Debarpan102/proprietary_vendor_realme_ice" remote="github-rmx3461" revision="fifteen" />
+  <project path="vendor/realme/ice" name="Debarpan102/proprietary_vendor_realme_ice" remote="github-rmx3461" revision="lineage-22.1" />
   
   <!-- Hardware -->
   <project path="hardware/oplus" name="Debarpan102/android_hardware_oplus" remote="github-rmx3461" revision="lineage-22.1" />
