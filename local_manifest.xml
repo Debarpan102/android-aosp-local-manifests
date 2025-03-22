@@ -25,7 +25,7 @@
   <!-- Common -->   
   <project path="device/oneplus/sm8350-common" name="Debarpan102/android_device_oneplus_sm8350-common" remote="github-rmx3461" revision="lineage-22.1" />
   
-  <project path="vendor/oneplus/sm8350-common" name="mvimal2607/proprietary_vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="fifteen" />
+  <project path="vendor/oneplus/sm8350-common" name="Debarpan102/proprietary_vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="fifteen" />
 
   <project path="vendor/bcr" name="Chaitanyakm/vendor_bcr" remote="github-rmx3461" revision="main" />
 
