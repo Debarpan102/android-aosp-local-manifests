@@ -33,6 +33,6 @@
   <project path="vendor/oplus/camera" name="mvimal2607/proprietary_vendor_oplus_camera" clone-depth="1" remote="gitlab-rmx3461" revision="fifteen" />
 
     <!-- ViPER4AndroidFX (FOSS Audio Mod)-->
-  <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone-depth="1" remote="github-rmx3461" revision="v4a" />
+  <!--project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone-depth="1" remote="github-rmx3461" revision="v4a" /-->
 
 </manifest>
