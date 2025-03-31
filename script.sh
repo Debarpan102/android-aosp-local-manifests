@@ -71,4 +71,4 @@ echo "========================================================================"
 . build/envsetup.sh
 axion ice gms pico
 axionSync
-ax -br -j16
+ax -br -j$(nproc)
