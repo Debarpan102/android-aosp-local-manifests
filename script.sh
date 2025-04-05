@@ -18,7 +18,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -26,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b lineage-22.2 .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 2.6-infinityX .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -67,6 +67,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Lineage-22.1
+# infinity
 . build/envsetup.sh
-brunch ice userdebug
+lunch infinity_ice-user
+mka bacon
