@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/bcr
+# rm -rf vendor/bcr
 # rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
@@ -26,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 2.6-infinityX .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 2.8-infinityX .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -69,5 +69,5 @@ echo "========================================================================"
 
 # infinity
 . build/envsetup.sh
-lunch infinity_ice-userdebug
+lunch infinity_ice-user
 mka bacon
