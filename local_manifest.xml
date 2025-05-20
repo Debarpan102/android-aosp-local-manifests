@@ -2,7 +2,7 @@
 <manifest>
     <!--
       * target: rmx3461 (ice)
-      * rom: pixelage
+      * rom: infinity-x 
     -->
   
   <remote name="github-rmx3461"
