@@ -18,7 +18,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/yaap/manifest.git -b fifteen --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -26,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 2.8-infinityX .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15.0-Yaap .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -52,6 +52,14 @@ sudo apt update && sudo apt install libc6-dev
 sudo apt install openssl libssl-dev -y && sudo apt install libssl-dev -y
 sudo apt-get install libfl-dev -y
 
+export CLANG_PATH=$PWD/prebuilts/clang/host/linux-x86/clang-r522817/bin
+export PATH=$CLANG_PATH:$PATH
+alias clang=$CLANG_PATH/clang
+alias clang++=$CLANG_PATH/clang++
+alias ld.lld=$CLANG_PATH/ld.lld
+export CC=$CLANG_PATH/clang
+export CXX=$CLANG_PATH/clang++
+export LD=$CLANG_PATH/ld.lld
 
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
@@ -67,7 +75,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# infinity
+# yaap
 . build/envsetup.sh
-lunch infinity_ice-user
-mka bacon
+lunch yaap_ice-user
+m yaap
+
