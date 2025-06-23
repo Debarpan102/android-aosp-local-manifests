@@ -14,7 +14,7 @@
   <project path="device/realme/ice" name="Infinity-X-Devices/device_realme_ice" remote="github-rmx3461" revision="15" />
 
   <!-- Kernel -->
-  <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461" remote="github-rmx3461" revision="stable" />
+  <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461" remote="github-rmx3461" revision="stable-r1" />
 
   <!-- Vendor -->
   <project path="vendor/realme/ice" name="Debarpan102/proprietary_vendor_realme_ice" remote="github-rmx3461" revision="lineage-22.2" />
