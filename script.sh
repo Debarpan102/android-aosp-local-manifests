@@ -69,5 +69,5 @@ echo "========================================================================"
 
 # infinity
 . build/envsetup.sh
-lunch infinity_ice-user
+lunch infinity_ice-eng
 mka bacon
