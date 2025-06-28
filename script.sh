@@ -8,6 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
+rm -rf hardware/qcom-caf/sm8350/audio
 # rm -rf vendor/bcr
 # rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
@@ -19,8 +20,6 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
-
-repo sync -j$(nproc --all) --no-tags --no-clone-bundle --current-branch
 
 echo "========================================================================"
 echo "REPO INITIALIZED AND SYNCED"
@@ -36,6 +35,9 @@ fi
 echo "========================================================================"
 echo "CLONED REPOS"
 echo "========================================================================"
+
+# sync 
+/opt/crave/resync.sh
 
 # Upgrade System and install openssl
 
