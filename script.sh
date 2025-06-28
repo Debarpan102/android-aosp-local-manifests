@@ -26,12 +26,21 @@ echo "REPO INITIALIZED AND SYNCED"
 echo "========================================================================"
 
 
-# Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 16.0-yaap .repo/local_manifests
-if [ ! 0 == 0 ]
-    then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
-fi
+# Clone repos
+rm -rf device/realme
+rm -rf kernel/oplus
+rm -rf vendor/realme
+rm -rf hardware/oplus
+rm -rf device/oneplus
+rm -rf vendor/oneplus
+rm -rf vendor/oplus
 
+git clone https://github.com/Debarpan102/android_device_realme_ice.git -b 16.0-yaap device/realme/ice
+git clone --depth 1 https://github.com/Debarpan102/android_device_oneplus_sm8350-common.git -b 16.0-yaap device/oneplus/sm8350-common
+git clone --depth 1 https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b lineage-22.2 vendor/realme/ice
+git clone --depth 1 https://github.com/Debarpan102/proprietary_vendor_oneplus_sm8350-common.git -b 16 vendor/oneplus/sm8350-common
+git clone --depth 1 https://github.com/Debarpan102/android_hardware_oplus.git -b 16.0-yaap hardware/oplus
+git clone --depth 1 https://github.com/Debarpan102/kernel_oplus_RMX3461.git -b stable-r1 kernel/oplus/RMX3461
 echo "========================================================================"
 echo "CLONED REPOS"
 echo "========================================================================"
