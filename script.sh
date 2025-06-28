@@ -18,7 +18,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-repo init -u https://github.com/yaap/manifest.git -b fifteen --git-lfs
+repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -26,7 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 15.0-Yaap .repo/local_manifests
+git clone https://github.com/Debarpan102/android-aosp-local-manifests --depth 1 -b 16.0-yaap .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/Debarpan102/android-aosp-local-manifests.git
 fi
@@ -61,6 +61,11 @@ export CC=$CLANG_PATH/clang
 export CXX=$CLANG_PATH/clang++
 export LD=$CLANG_PATH/ld.lld
 
+git config --global user.email "debarpan102github@gmail.com"
+git config --global user.name "Debarpan102"
+cd hardware/qcom-caf/sm8350/audio/hal/audio_extn
+git fetch https://github.com/StatiXOS/android_hardware_qcom_audio refs/changes/34/15434/2 && git cherry-pick FETCH_HEAD
+cd -
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
 echo "========================================================================"
