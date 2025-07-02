@@ -9,6 +9,7 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf hardware/qcom-caf/sm8350/audio
+rm -rf vendor/qcom/common
 # rm -rf vendor/bcr
 # rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
@@ -64,11 +65,6 @@ export CC=$CLANG_PATH/clang
 export CXX=$CLANG_PATH/clang++
 export LD=$CLANG_PATH/ld.lld
 
-git config --global user.email "debarpan102github@gmail.com"
-git config --global user.name "Debarpan102"
-cd hardware/qcom-caf/sm8350/audio/hal/audio_extn
-git fetch https://github.com/StatiXOS/android_hardware_qcom_audio refs/changes/34/15434/2 && git cherry-pick FETCH_HEAD
-cd -
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
 echo "========================================================================"
