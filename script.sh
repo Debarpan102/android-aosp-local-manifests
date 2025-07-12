@@ -82,6 +82,6 @@ echo "========================================================================"
 
 # yaap
 . build/envsetup.sh
-lunch yaap_ice-eng
+lunch yaap_ice-user
 m yaap
 
