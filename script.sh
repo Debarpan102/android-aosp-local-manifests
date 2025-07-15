@@ -11,7 +11,6 @@ rm -rf vendor/oplus
 rm -rf hardware/qcom-caf/sm8350/audio
 rm -rf vendor/qcom/common
 rm -rf tools/extract-utils
-rm -rf out
 # rm -rf vendor/bcr
 # rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
