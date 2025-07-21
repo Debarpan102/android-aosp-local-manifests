@@ -83,5 +83,5 @@ echo "========================================================================"
 # yaap
 . build/envsetup.sh
 lunch yaap_ice-user
-TARGET_BUILD_GAPPS=true m yaap
+m yaap
 
