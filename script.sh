@@ -3,6 +3,7 @@
 rm -rf .repo/local_manifests
 rm -rf device/realme
 rm -rf kernel/oplus
+rm -rf kernel/oneplus
 rm -rf vendor/realme
 rm -rf hardware/oplus
 rm -rf device/oneplus
