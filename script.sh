@@ -10,7 +10,7 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf hardware/qcom-caf/sm8350/audio
-rm -rf vendor/qcom/common
+rm -rf vendor/qcom/
 rm -rf tools/extract-utils
 # rm -rf vendor/bcr
 # rm -rf vendor/lineage-priv/keys/
