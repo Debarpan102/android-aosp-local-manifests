@@ -14,7 +14,7 @@ rm -rf prebuilts/
 rm -rf dump/
 rm -rf dump2/
 rm -rf dump3/
-
+rm -rf release-files/
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
