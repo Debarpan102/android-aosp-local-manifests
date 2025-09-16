@@ -9,9 +9,9 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf hardware/qcom-caf/sm8350/audio
 rm -rf vendor/qcom/
-rm -rf tools/extract-utils
-rm -rf prebuilts/
+rm -rf tools/extract-utils/
 rm -rf dump/
+rm -rf dump1/
 rm -rf dump2/
 rm -rf dump3/
 rm -rf release-files/
@@ -19,6 +19,12 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
+# update system packages
+sudo apt update && sudo apt upgrade -y
+
+echo "======== SYSTEM UPDATED ========="
+
+# repo sync 
 repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 
 echo "========================================================================"
@@ -26,7 +32,6 @@ echo "REPO INITIALIZED AND SYNCED"
 echo "========================================================================"
 
 # Clone repos
-
 git clone https://github.com/Debarpan102/android_device_realme_ice.git -b 16.0-yaap device/realme/ice
 git clone https://github.com/Debarpan102/android_device_oneplus_sm8350-common.git -b 16.0-yaap device/oneplus/sm8350-common
 git clone https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b lineage-22.2 vendor/realme/ice
@@ -40,17 +45,6 @@ echo "========================================================================"
 
 # sync 
 /opt/crave/resync.sh
-
-# Upgrade System and install openssl
-
-sudo apt update && sudo apt upgrade -y
-sudo apt update && sudo apt install libc6-dev
-sudo apt install openssl libssl-dev -y && sudo apt install libssl-dev -y
-sudo apt-get install libfl-dev -y
-
-echo "========================================================================"
-echo "SYSTEM UPGRADED"
-echo "========================================================================"
 
 echo "========================================================================"
 echo "BUILDING........."
@@ -68,6 +62,3 @@ TARGET_BUILD_GAPPS=true m yaap
 echo "========================================================================"
 echo "BUILD COMPLETE"
 echo "========================================================================"
-
-
-
