@@ -29,7 +29,7 @@ echo "========================================================================"
 # Clone repos
 git clone https://github.com/Debarpan102/android_device_realme_ice.git -b 16.0-yaap device/realme/ice
 git clone https://github.com/Debarpan102/android_device_oneplus_sm8350-common.git -b 16.0-yaap device/oneplus/sm8350-common
-git clone https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b lineage-22.2 vendor/realme/ice
+git clone https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b 16.0 vendor/realme/ice
 git clone https://github.com/Debarpan102/proprietary_vendor_oneplus_sm8350-common.git -b 16.0 vendor/oneplus/sm8350-common
 git clone https://github.com/Debarpan102/android_hardware_oplus.git -b sixteen hardware/oplus
 git clone https://github.com/Debarpan102/kernel_oneplus_sm8350.git -b sixteen-legacy kernel/oneplus/sm8350
