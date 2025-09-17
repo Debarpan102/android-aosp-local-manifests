@@ -19,16 +19,11 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-# update system packages
-sudo apt update && sudo apt upgrade -y
-
-echo "======== SYSTEM UPDATED ========="
-
-# repo sync 
+# repo init
 repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 
 echo "========================================================================"
-echo "REPO INITIALIZED AND SYNCED"
+echo "REPO INITIALIZED"
 echo "========================================================================"
 
 # Clone repos
