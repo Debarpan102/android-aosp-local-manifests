@@ -14,6 +14,7 @@ rm -rf dump/
 rm -rf dump1/
 rm -rf dump2/
 rm -rf out/
+rm -rf prebuilts/gcc/linux-x86/
 rm -rf dump3/
 rm -rf release-files/
 echo "========================================================================"
