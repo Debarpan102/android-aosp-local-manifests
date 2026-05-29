@@ -7,7 +7,7 @@ rm -rf vendor/realme
 rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
-rm -rf hardware/qcom-caf/sm8350/audio
+rm -rf hardware/qcom-caf/sm8350/ 
 rm -rf vendor/qcom/
 rm -rf tools/extract-utils/
 rm -rf dump/
@@ -42,6 +42,11 @@ echo "========================================================================"
 
 # sync 
 /opt/crave/resync.sh
+
+# hals
+rm -rf hardware/qcom-caf/sm8350/audio
+git clone https://github.com/LineageOS/android_hardware_qcom_audio.git -b lineage-23.2-caf-sm8350 hardware/qcom-caf/sm8350/audio
+
 
 echo "========================================================================"
 echo "BUILDING........."
