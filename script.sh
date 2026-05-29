@@ -47,6 +47,12 @@ echo "========================================================================"
 rm -rf hardware/qcom-caf/sm8350/audio
 git clone https://github.com/LineageOS/android_hardware_qcom_audio.git -b lineage-23.2-caf-sm8350 hardware/qcom-caf/sm8350/audio
 
+#fixup
+cd hardware/lineage/compat
+git remote add derp https://github.com/DerpFest-AOSP/android_hardware_lineage_compat.git
+git fetch derp
+git cherry-pick 47184142ffd1d5215169d134689705245cc11030
+cd -
 
 echo "========================================================================"
 echo "BUILDING........."
