@@ -34,7 +34,7 @@ git clone https://github.com/Debarpan102/android_device_oneplus_sm8350-common.gi
 git clone https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b 16.0 vendor/realme/ice
 git clone https://github.com/Debarpan102/proprietary_vendor_oneplus_sm8350-common.git -b sixteen vendor/oneplus/sm8350-common
 git clone https://github.com/Debarpan102/android_hardware_oplus.git -b sixteen hardware/oplus
-git clone https://github.com/Debarpan102/kernel_oneplus_sm8350.git -b sixteen kernel/oneplus/sm8350
+git clone https://github.com/Debarpan102/kernel_oneplus_sm8350.git -b rebase-05312026 kernel/oneplus/sm8350
 
 echo "========================================================================"
 echo "CLONED REPOS"
@@ -60,12 +60,18 @@ echo "========================================================================"
 
 # yaap
 . build/envsetup.sh
-lunch yaap_ice-user
+lunch yaap_ice-eng
 m yaap
-mkdir release-files
-cp -r out/target/product/ice/YAAP-16* release-files/
+mkdir release-files-eng
+cp -r out/target/product/ice/YAAP-16* release-files-eng/
 lunch yaap_ice-user
 TARGET_BUILD_GAPPS=true m yaap
+mkdir release-files-gapps
+cp -r out/target/product/ice/YAAP-16* release-files-gapps/
+lunch yaap_ice-user
+m yaap
+mkdir release-files-user
+cp -r out/target/product/ice/YAAP-16* release-files-user/
 
 echo "========================================================================"
 echo "BUILD COMPLETE"
