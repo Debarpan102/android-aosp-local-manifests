@@ -17,6 +17,9 @@ rm -rf out/
 rm -rf prebuilts/gcc/linux-x86/
 rm -rf dump3/
 rm -rf release-files/
+rm -rf release-files-eng
+rm -rf release-files-gapps
+rm -rf release-files-user
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
