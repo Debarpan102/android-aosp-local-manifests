@@ -66,14 +66,14 @@ lunch yaap_ice-eng
 m yaap
 mkdir release-files-eng
 cp -r out/target/product/ice/YAAP-16* release-files-eng/
-lunch yaap_ice-user
-TARGET_BUILD_GAPPS=true m yaap
-mkdir release-files-gapps
-cp -r out/target/product/ice/YAAP-16* release-files-gapps/
-lunch yaap_ice-user
-m yaap
-mkdir release-files-user
-cp -r out/target/product/ice/YAAP-16* release-files-user/
+#lunch yaap_ice-user
+#TARGET_BUILD_GAPPS=true m yaap
+#mkdir release-files-gapps
+#cp -r out/target/product/ice/YAAP-16* release-files-gapps/
+#lunch yaap_ice-user
+#m yaap
+#mkdir release-files-user
+#cp -r out/target/product/ice/YAAP-16* release-files-user/
 
 echo "========================================================================"
 echo "BUILD COMPLETE"
