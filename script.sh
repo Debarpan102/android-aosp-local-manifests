@@ -10,11 +10,7 @@ rm -rf vendor/oneplus
 rm -rf hardware/qcom-caf/sm8350/ 
 rm -rf vendor/qcom/
 rm -rf tools/extract-utils/
-rm -rf dump/
-rm -rf dump1/
-rm -rf dump2/
 rm -rf prebuilts/gcc/linux-x86/
-rm -rf dump3/
 rm -rf release-files/
 rm -rf release-files-eng
 rm -rf release-files-gapps
@@ -24,19 +20,19 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 # repo init
-repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
+repo init -u https://github.com/yaap/manifest.git -b seventeen --git-lfs
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
 echo "========================================================================"
 
 # Clone repos
-git clone https://github.com/Debarpan102/android_device_realme_ice.git -b test device/realme/ice
-git clone https://github.com/Debarpan102/android_device_oneplus_sm8350-common.git -b test device/oneplus/sm8350-common
+git clone https://github.com/Debarpan102/android_device_realme_ice.git -b 17.0-yaap device/realme/ice
+git clone https://github.com/Debarpan102/android_device_oneplus_sm8350-common.git -b 17.0-yaap device/oneplus/sm8350-common
 git clone https://github.com/Debarpan102/proprietary_vendor_realme_ice.git -b 16.0 vendor/realme/ice
-git clone https://github.com/Debarpan102/proprietary_vendor_oneplus_sm8350-common.git -b test vendor/oneplus/sm8350-common
-git clone https://github.com/Debarpan102/android_hardware_oplus.git -b sixteen hardware/oplus
-git clone https://github.com/Debarpan102/kernel_oneplus_sm8350.git -b rebase-05312026 kernel/oneplus/sm8350
+git clone https://github.com/Debarpan102/proprietary_vendor_oneplus_sm8350-common.git -b sixteen vendor/oneplus/sm8350-common
+git clone https://github.com/Debarpan102/android_hardware_oplus.git -b seventeen hardware/oplus
+git clone https://github.com/Debarpan102/kernel_oneplus_sm8350.git -b seventeen kernel/oneplus/sm8350
 
 echo "========================================================================"
 echo "CLONED REPOS"
@@ -64,16 +60,16 @@ echo "========================================================================"
 . build/envsetup.sh
 lunch yaap_ice-eng
 m yaap
-mkdir release-files-eng
-cp -r out/target/product/ice/YAAP-16* release-files-eng/
+#mkdir release-files-eng
+#cp -r out/target/product/ice/YAAP-17* release-files-eng/
 #lunch yaap_ice-user
 #TARGET_BUILD_GAPPS=true m yaap
 #mkdir release-files-gapps
-#cp -r out/target/product/ice/YAAP-16* release-files-gapps/
+#cp -r out/target/product/ice/YAAP-17* release-files-gapps/
 #lunch yaap_ice-user
 #m yaap
 #mkdir release-files-user
-#cp -r out/target/product/ice/YAAP-16* release-files-user/
+#cp -r out/target/product/ice/YAAP-17* release-files-user/
 
 echo "========================================================================"
 echo "BUILD COMPLETE"
