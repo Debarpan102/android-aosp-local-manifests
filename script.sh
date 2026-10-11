@@ -7,6 +7,10 @@ rm -rf vendor/realme
 rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
+rm -rf dump
+rm -rf dump1
+rm -rf dump2
+rm -rf dump3
 rm -rf hardware/qcom-caf/sm8350/ 
 rm -rf vendor/qcom/
 rm -rf tools/extract-utils/
