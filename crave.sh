@@ -47,7 +47,7 @@ echo "========================================================================"
 
 # hals
 rm -rf hardware/qcom-caf/sm8350/audio
-git clone https://github.com/LineageOS/android_hardware_qcom_audio.git -b lineage-23.2-caf-sm8350 hardware/qcom-caf/sm8350/audio
+git clone https://github.com/LineageOS/android_hardware_qcom_audio.git -b lineage-24.0-caf-sm8350 hardware/qcom-caf/sm8350/audio
 
 #fixup
 cd hardware/lineage/compat
